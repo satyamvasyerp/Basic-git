@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T74</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #34495e;
+        }
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col my-4">
+                <div class="card" style="padding: 50px">
+                    <h2 class="header" style="text-align: center; margin-bottom: 20px;">Input Text</h2>
+                    <div class="card-body">
+                        <form class="form-inline">
+                            <div class="form-group mx-sm-3 mb-2">
+                              <label for="inputName" class="sr-only">Full Name</label>
+                              <input type="text" class="form-control" id="inputName"  placeholder="Full Name">
+                            </div>
+                            <button type="button" class="btn btn-primary mb-2" onclick="myFunction()"> >> </button>
+                            <button type="button" class="btn btn-primary ml-2 mb-2" onclick="myFunction1()"> << </button>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="inputName1" class="sr-only">Full Name</label>
+                                <input type="text" class="form-control" id="inputName1" placeholder="Full Name">
+                              </div>
+                          </form>
+                    </div>
+                    <p style="text-align: center;">Value : <span id="demo">-</span></p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let myFunction = () =>{
+        let inputName = document.getElementById("inputName").value;
+        // let inputName1 = document.getElementById("inputName1").value;
+        document.getElementById("inputName1").value=inputName;
+        document.getElementById("demo").innerHTML=inputName;
+        console.log(inputName);
+        // inputName.value = inputName1.value;
+        }
+        let myFunction1 = () =>{
+            let inputName1 = document.getElementById("inputName1").value;
+            document.getElementById("inputName").value = inputName1;
+            document.getElementById("demo").innerHTML=inputName1;
+        }
+    </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
